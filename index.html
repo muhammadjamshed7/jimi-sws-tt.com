@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad (JIMI) Jamshed - Business Card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .card {
+            width: 350px;
+            height: 200px;
+            perspective: 1000px;
+            margin: 20px;
+        }
+        
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+        
+        .card:hover .card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        .card-back {
+            transform: rotateY(180deg);
+        }
+        
+        .circuit-pattern {
+            background-image: 
+                radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(147, 51, 234, 0.1) 0%, transparent 50%),
+                linear-gradient(45deg, transparent 30%, rgba(59, 130, 246, 0.05) 50%, transparent 70%);
+        }
+        
+        .tech-icon {
+            width: 16px;
+            height: 16px;
+            opacity: 0.6;
+        }
+        
+        .qr-code {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 10px;
+            font-weight: 600;
+        }
+        
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 min-h-screen flex items-center justify-center p-8">
+    <div class="text-center">
+        <h1 class="text-white text-2xl font-bold mb-8">Muhammad (JIMI) Jamshed - Business Card</h1>
+        <p class="text-gray-400 mb-8">Hover over the card to see the back side</p>
+        
+        <div class="card">
+            <div class="card-inner">
+                <!-- Front Side -->
+                <div class="card-front bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 circuit-pattern p-6 flex flex-col justify-between">
+                    <!-- Header with Logo -->
+                    <div class="flex items-center justify-between">
+                        <div class="logo-icon bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <div class="flex space-x-1">
+                            <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                            <div class="w-2 h-2 bg-purple-400 rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
+                            <div class="w-2 h-2 bg-blue-400 rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Content -->
+                    <div class="text-left">
+                        <h2 class="text-white text-lg font-bold mb-1">MUHAMMAD (JIMI) JAMSHED</h2>
+                        <p class="text-blue-300 text-xs font-medium mb-2 leading-tight">Full Stack Developer | B2B SaaS & CRM/ERP Solutions Architect</p>
+                        <p class="text-purple-300 text-xs font-medium mb-3">AI & Chatbot Integration Expert</p>
+                        <div class="border-l-2 border-blue-500 pl-3">
+                            <p class="gradient-text text-sm font-semibold">Driving Innovation & Growth for Enterprises</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tech Icons -->
+                    <div class="flex justify-between items-center">
+                        <div class="flex space-x-2">
+                            <svg class="tech-icon text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <svg class="tech-icon text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                            <svg class="tech-icon text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                            </svg>
+                        </div>
+                        <div class="text-xs text-gray-400 font-mono">v2024.1</div>
+                    </div>
+                </div>
+                
+                <!-- Back Side -->
+                <div class="card-back bg-gradient-to-br from-slate-800 via-blue-800 to-slate-800 circuit-pattern p-6 flex flex-col justify-between">
+                    <!-- Header -->
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-white font-semibold text-sm">Contact Information</h3>
+                        <div class="qr-code">
+                            <span>QR</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Contact Details -->
+                    <div class="space-y-3 text-left">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            <span class="text-white text-xs">jamshedmsd589@gmail.com</span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                            <span class="text-white text-xs">smartweblabstech.com</span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            <span class="text-white text-xs">Lahore, Punjab, Pakistan</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Tech Stack Icons -->
+                    <div class="flex justify-between items-center">
+                        <div class="flex space-x-2">
+                            <div class="w-6 h-6 bg-blue-500 rounded flex items-center justify-center">
+                                <span class="text-white text-xs font-bold">R</span>
+                            </div>
+                            <div class="w-6 h-6 bg-green-500 rounded flex items-center justify-center">
+                                <span class="text-white text-xs font-bold">N</span>
+                            </div>
+                            <div class="w-6 h-6 bg-purple-500 rounded flex items-center justify-center">
+                                <span class="text-white text-xs font-bold">AI</span>
+                            </div>
+                            <div class="w-6 h-6 bg-orange-500 rounded flex items-center justify-center">
+                                <span class="text-white text-xs font-bold">☁</span>
+                            </div>
+                        </div>
+                        <div class="text-xs text-gray-400">LinkedIn QR →</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <p class="text-gray-500 text-sm mt-8">Professional business card with interactive flip animation</p>
+    </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98149bf6372a21ec',t:'MTc1ODIzNzk5Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
